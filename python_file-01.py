@@ -1,5 +1,5 @@
 import random
-from cryptography.Fermet import Fernet
+from cryptography.fernet import Fernet
 
 passlen = int(input("Enter how many characters: "))
 s='''abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?
@@ -7,6 +7,19 @@ s='''abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?
      abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
      abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
     '''
-p = "".join(random.sample(s,passlen ))
-print(p)
+password = "".join(random.sample(s,passlen ))
 
+key = Fernet.generate_key()
+
+fernet = Fernet(key)
+
+encPassword = fernet.encrypt(password.encode())
+
+
+print(password)
+print(encPassword)
+
+
+decPassword = fernet.decrypt(encPassword).decode()
+
+print(decPassword)
