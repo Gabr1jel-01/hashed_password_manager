@@ -9,11 +9,14 @@ def validateLogin(user_name, user_password):
     print("Password entered: ", user_password.get())
 
 appWindow = Tk()
-appWindow.geometry("300150")
+appWindow.geometry("300x150")
 appWindow.title("Login")
 
+# username label and text entry box
+user_nameLabel = Label(appWindow, text="Username").grid(row=0, column=0)#er_name = StringVar()
+user_name = StringVar()
+user_nameEntry = Entry(appWindow,textvariable=user_name).grid(row=0,column=1)
 
-user_nameLabel = Label
 
 
 
