@@ -15,12 +15,12 @@ appWindow.title("Login")
 # username label and text entry box
 user_nameLabel = Label(appWindow, text="Username").grid(row=0, column=0)
 user_name = StringVar()
-user_nameEntry = Entry(appWindow,textvariable=user_name).grid(row=0,column=1)
+user_name_entry_box = Entry(appWindow,textvariable=user_name).grid(row=0,column=1)
 
 
-#passwordLabel = Label(appWindow, text ="Password").grid(row=0, column=2)
-#password = StringVar()
-#password_entry_box = Entry(appWindow,textvariable=password).grid(row=0, column = 2)
+passwordLabel = Label(appWindow, text ="Password").grid(row=1, column=0)
+password = StringVar()
+password_entry_box = Entry(appWindow,textvariable=password).grid(row=1, column = 1)
 
 
 passlen = int(input("Enter how many characters: "))
