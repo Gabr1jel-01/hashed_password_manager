@@ -17,9 +17,12 @@ user_nameLabel = Label(appWindow, text="Username").grid(row=0, column=0)#er_name
 user_name = StringVar()
 user_nameEntry = Entry(appWindow,textvariable=user_name).grid(row=0,column=1)
 
+passwordLabel = Label(appWindow, text ="Password").grid(row=0, column=2)
+password = StringVar()
+password_entry_box = Entry(appWindow,textvariable=password).grid(row=0, column = 2)
 
 
-
+"""
 passlen = int(input("Enter how many characters: "))
 s='''abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?
      abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -43,3 +46,5 @@ print(encPassword)
 decPassword = fernet.decrypt(encPassword).decode()
 
 print(decPassword)
+
+"""
