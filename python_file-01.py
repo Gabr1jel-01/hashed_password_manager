@@ -14,18 +14,27 @@ appWindow.title("Login")
 appWindow.configure(bg="#c7d1af")
 
 # username label and text entry box
-user_nameLabel = Label(appWindow, text="Username").grid(row=0, column=0)
+user_nameLabel = Label(appWindow, text="Username",bg="#bcbcbc").grid(row=0, column=0)
 user_name = StringVar()
 user_name_entry_box = Entry(appWindow,textvariable=user_name, bg="#bcbcbc").grid(row=0,column=1)
 
-#password label amd text entry box
-passwordLabel = Label(appWindow, text ="Password").grid(row=1, column=0)
+#password label and text entry box
+passwordLabel = Label(appWindow, text ="Password",bg="#bcbcbc").grid(row=1, column=0)
 password = StringVar()
 password_entry_box = Entry(appWindow,textvariable=password, bg="#bcbcbc").grid(row=1, column = 1)
 
+#double_check_password label and text entry box
+double_check_password = Label(appWindow, text="Re-enter",bg="#bcbcbc").grid(row=3,column=0)
+
+def window_after_submit():
+    
+    pass
+
+
+
 #submit button
 
-submit_button = Button(appWindow, text= "Submit", bd=3, activebackground="#3e6dbf").grid(row=2, column=0)
+submit_button = Button(appWindow, text= "Submit", bd=3, activebackground="#3e6dbf").grid(row=4, column=0)
 
 
 
