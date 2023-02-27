@@ -24,7 +24,9 @@ password = StringVar()
 password_entry_box = Entry(appWindow,textvariable=password, bg="#bcbcbc").grid(row=1, column = 1)
 
 #double_check_password label and text entry box
-double_check_password = Label(appWindow, text="Re-enter",bg="#bcbcbc").grid(row=3,column=0)
+double_check_passwordLabel = Label(appWindow, text="Re-enter",bg="#bcbcbc").grid(row=2,column=0)
+double_check_password = StringVar()
+double_check_password_entry_box = Entry(appWindow, textvariable=double_check_password, bg="#bcbcbc").grid(row=2, column=1)
 
 def window_after_submit():
     
