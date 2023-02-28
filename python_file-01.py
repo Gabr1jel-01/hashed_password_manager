@@ -28,7 +28,7 @@ double_check_passwordLabel = Label(appWindow, text="Re-enter",bg="#bcbcbc").grid
 double_check_password = StringVar()
 double_check_password_entry_box = Entry(appWindow, textvariable=double_check_password, bg="#bcbcbc").grid(row=2, column=1)
 
-def window_after_submit():
+def submit_button_logic():
     
     pass
 
