@@ -39,33 +39,4 @@ def window_after_submit():
 submit_button = Button(appWindow, text= "Submit", bd=3, activebackground="#3e6dbf").grid(row=4, column=0)
 
 
-
-
-"""
-passlen = int(input("Enter how many characters: "))
-s='''abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?
-     abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
-     abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
-     abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
-    '''
-password = "".join(random.sample(s,passlen ))
-
-key = Fernet.generate_key()
-
-fernet = Fernet(key)
-
-encPassword = fernet.encrypt(password.encode())
-
-
-print(password)
-
-print(encPassword)
-
-
-decPassword = fernet.decrypt(encPassword).decode()
-
-print(decPassword)
-
-
-"""
 appWindow.mainloop()
